@@ -20,6 +20,6 @@ export default async function () {
 
   return {
     prompt,
-    result: completion.data.choices[0].text
+    result: completion.data.choices[0].text,
   }
 }

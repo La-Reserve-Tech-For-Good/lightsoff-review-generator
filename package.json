@@ -4,9 +4,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node --es-module-specifier-resolution=node --no-warnings -r dotenv/config src/index.js"
+    "start": "node --es-module-specifier-resolution=node --no-warnings -r dotenv/config src/index.js",
+    "completion": "npm start completion",
+    "rephrase": "npm start rephrase"
   },
   "dependencies": {
+    "deepl-node": "^1.7.2",
     "dotenv": "^16.0.3",
     "openai": "^3.0.0"
   }

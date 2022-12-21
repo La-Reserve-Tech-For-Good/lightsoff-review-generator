@@ -1,4 +1,3 @@
-
 const text = `Ecris un message à destination d'un commerçant pour l'inciter à éteindre sa devanture dès la fermeture.`
 
 const keywords = [
@@ -18,7 +17,7 @@ const keywords = [
   'environement',
 ]
 
-const examples = [
+export const examples = [
   `Exemple : Bonjour, pourriez-vous éteindre les lumières en partant le soir ? J'ai remarqué en passant que votre vitrine était allumée après la fermeture. Vous l'ignorez peut-être, mais la loi sur l'éclairage nocturne a été renforcée en octobre 2022 : vous risquez une amende de 7500€. En pleine crise énergétique, chaque geste est important. Vous ferez des économies, éviterez une amende et votre clientèle de plus en plus attentive appréciera cet effort. Qu'en pensez-vous ?`,
   `Exemple : Bonjour, Je suis passée devant votre boutique (lorsqu'elle était fermée) et j'ai remarqué que l'éclairage était allumé...  C'est, aujourd'hui en France, interdit par la loi pendant la nuit à partir de 1h du matin (avec une amende allant jusqu'à 7500€). Mais surtout nous traversons une crise climatique et énergétique... Pouvez-vous nous aider à faire face à cette double crise en éteignant les lumières de votre boutique hors des horaires d'ouverture ? Ça serait génial ! 🙏 Merci !`,
   `Exemple : Bonjour, Je viens vers vers vous afin de voir s'il serait possible de couper vos lumières la nuit ? La crise énergétique (et donc climatique) est un des enjeux clés de notre siècle et ce petit geste, si répété par tous, peut en effet participer à sauver la planète. Je ne sais pas si vous êtes informés à ce sujet mais depuis octobre 2022 vous encourez également une amende allant jusque 7500€. Ce serait dommage pour quelque chose si peu utile. Croyez moi, votre clientèle appréciera :) Qu'en pensez-vous ?`,
@@ -43,8 +42,10 @@ const examples = [
 
 const pick = (atLeast, atMost, list) => {
   const clonedList = [...list]
-  const pickedCount = Math.floor(Math.random() * (atMost - atLeast + 1) + atLeast)
-  const picked = [];
+  const pickedCount = Math.floor(
+    Math.random() * (atMost - atLeast + 1) + atLeast
+  )
+  const picked = []
 
   for (let i = 0; i < pickedCount; i++) {
     const randomIndex = Math.floor(Math.random() * (clonedList.length - 1))
@@ -55,6 +56,11 @@ const pick = (atLeast, atMost, list) => {
   return picked
 }
 
-const prompt = () => `${text}\n\nMots clés: ${pick(5, 12, keywords).join(', ')}\n\n${pick(4, 6, examples).join('\n')}\n\nBonjour,\n`
+const prompt = () =>
+  `${text}\n\nMots clés: ${pick(5, 12, keywords).join(', ')}\n\n${pick(
+    4,
+    6,
+    examples
+  ).join('\n')}\n\nBonjour,\n`
 
 export default prompt

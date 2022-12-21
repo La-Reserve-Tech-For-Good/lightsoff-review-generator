@@ -20,13 +20,13 @@
 
 ## Table of Contents
 
-* [About the Project](#about-the-project)
-  * [Built With](#built-with)
-* [Getting Started](#getting-started)
-  * [Installation](#installation)
-* [Contributing](#contributing)
-* [License](#license)
-* [Contact](#contact)
+- [About the Project](#about-the-project)
+  - [Built With](#built-with)
+- [Getting Started](#getting-started)
+  - [Installation](#installation)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
 ## About The Project
 
@@ -34,8 +34,8 @@ To do
 
 ### Built With
 
-* [OpenAI](https://openai.com/) & [GPT-3](https://beta.openai.com/docs/models/gpt-3)
-* [NodeJS](https://nodejs.org)
+- [OpenAI](https://openai.com/) & [GPT-3](https://beta.openai.com/docs/models/gpt-3)
+- [NodeJS](https://nodejs.org)
 
 ## Getting Started
 
@@ -50,7 +50,19 @@ npm install
 ### Start Reviews Generation
 
 ```console
-npm start <iterations (default: 1)> <slugIdStarter (default: 1)>
+npm start <method completion | rephrase(default: completion)> <iterations (default: 1)> <slugIdStarter (default: 1)>
+```
+
+### Shortcut with OpenAi method
+
+```console
+npm completion <iterations (default: 1)> <slugIdStarter (default: 1)>
+```
+
+### Shortcut with DeepL method
+
+```console
+npm rephrase <iterations (default: 1)> <slugIdStarter (default: 1)>
 ```
 
 The review format is a `csv` compatible with Webflow's CMS import.
@@ -61,7 +73,7 @@ The review format is a `csv` compatible with Webflow's CMS import.
 `index.js` => main file  
 `completion.js` => it queries OpenAI completion API  
 `prompt.js` => build the prompt given to OpenAI completion API  
-`results.txt` => where results are stored  
+`results.txt` => where results are stored
 
 ## Contributing
 

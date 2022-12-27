@@ -20,13 +20,13 @@
 
 ## Table of Contents
 
-* [About the Project](#about-the-project)
-  * [Built With](#built-with)
-* [Getting Started](#getting-started)
-  * [Installation](#installation)
-* [Contributing](#contributing)
-* [License](#license)
-* [Contact](#contact)
+- [About the Project](#about-the-project)
+  - [Built With](#built-with)
+- [Getting Started](#getting-started)
+  - [Installation](#installation)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
 ## About The Project
 
@@ -34,8 +34,9 @@ To do
 
 ### Built With
 
-* [OpenAI](https://openai.com/) & [GPT-3](https://beta.openai.com/docs/models/gpt-3)
-* [NodeJS](https://nodejs.org)
+- [OpenAI](https://openai.com/) & [GPT-3](https://beta.openai.com/docs/models/gpt-3)
+- [NodeJS](https://nodejs.org)
+- [DeepL](https://github.com/DeepLcom/deepl-node)
 
 ## Getting Started
 
@@ -61,7 +62,8 @@ The review format is a `csv` compatible with Webflow's CMS import.
 `index.js` => main file  
 `completion.js` => it queries OpenAI completion API  
 `prompt.js` => build the prompt given to OpenAI completion API  
-`results.txt` => where results are stored  
+`rephrase.js` => rephrase OpenAI result with DeepL API (French => Foreign language => French)
+`results.txt` => where results are stored
 
 ## Contributing
 
